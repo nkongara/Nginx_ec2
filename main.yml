@@ -3,7 +3,9 @@
   remote_user: ubuntu
   sudo: yes
   tasks:
-  - name: install nginx
+  - name: NGINX | Installing NGINX
     apt: name=nginx update_cache=yes
-
- 
+  - name: NGINX | Starting NGINX
+    service: name=nginx state=started
+  - name: NGINX | Deploying Welcome Page
+    template: src=index.html dest=/usr/share/nginx/html/index.html
