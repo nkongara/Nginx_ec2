@@ -1,0 +1,9 @@
+---
+InstanceCount: 1
+ami_image: ami-31490d51
+app_code_user: ec2_user
+aws_region: us-west-1
+instance_type: t2.micro
+keypair: RedHatEc2
+security_group: webserver
+tag_name: ec2_tag
